@@ -24,9 +24,9 @@ const PORT = process.env.PORT || 5050;
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.sendFile("");
-});
+// app.get("/", (req, res) => {
+//   res.sendFile();
+// });
 
 app.get("/users", (req, res) => {
   res.send("testing");
