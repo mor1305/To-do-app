@@ -1,5 +1,5 @@
 import "./App.css";
-import api from "./api/api.js";
+import { api } from "./api/api.js";
 
 function App() {
   const handleClick = () => {
