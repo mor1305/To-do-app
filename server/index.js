@@ -14,7 +14,7 @@ app.use(bodyParser.json({ limit: "10mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "10mb", extended: true }));
 app.use(cors());
 
-const publicPath = path.join(__dirname, "client", "build");
+const publicPath = path.join(__dirname, "..", "client", "build");
 app.use(express.static(publicPath));
 
 const URI = process.env.ATLAS_URI;
