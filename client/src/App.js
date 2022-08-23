@@ -1,9 +1,9 @@
 import "./App.css";
-import axios from "axios";
+import api from "./api/api.js";
 
 function App() {
   const handleClick = () => {
-    axios.get("http://localhost:5050/users").then((res) => console.log(res));
+    api.get("/users").then((res) => console.log(res));
   };
   return (
     <div className="App">
