@@ -20,7 +20,8 @@ app.use(express.static(publicPath));
 const URI = process.env.ATLAS_URI;
 const PORT = process.env.PORT || 5050;
 
-// mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true }); //db file
+console.log(URI);
+mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true }); //db file
 
 app.use(express.json());
 
