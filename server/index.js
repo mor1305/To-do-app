@@ -11,8 +11,8 @@ app.use(cors());
 
 const URI = process.env.ATLAS_URI;
 const PORT = process.env.PORT || 5050;
-// console.log(URI);
-mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true }); //db file
+
+// mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true }); //db file
 
 app.use(express.json());
 
