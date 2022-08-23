@@ -3,8 +3,16 @@ import mongoose from "mongoose";
 import cors from "cors";
 import bodyParser from "body-parser";
 import "dotenv/config";
+import path from "path";
+import * as url from "url";
+
+const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
 
 const app = express();
+
+const publicPath = path.join(__dirname, "client", "build");
+app.use(express.static(publicPath));
+
 app.use(bodyParser.json({ limit: "10mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "10mb", extended: true }));
 app.use(cors());
@@ -17,7 +25,7 @@ const PORT = process.env.PORT || 5050;
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("<h1>hello world</h1>");
+  res.sendFile("");
 });
 
 app.get("/users", (req, res) => {
