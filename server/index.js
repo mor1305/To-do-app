@@ -16,6 +16,10 @@ mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true }); //db
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("<h1>hello world</h1>");
+});
+
 app.get("/users", (req, res) => {
   res.send("testing");
 });
